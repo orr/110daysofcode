@@ -41,11 +41,12 @@
 
 .main {
   width: 80%;
-  height: 80%;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
+  
 }
 
 .navbar {
@@ -54,29 +55,18 @@
   justify-content: space-between;
   color: #b2daff;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   width: 100%;
   position: relative;
-}
-
-.leftbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-right: auto;
-  
 }
 
 .navbar h1 {
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 60px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    text-align: center;
-    
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
 }
 
 .menu {
@@ -86,23 +76,31 @@
   height: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem 0rem;
-  gap: .5rem;
+  
+  
 }
 
 .menu-up {
   display: flex;
   width: 100%;
+  
   gap: .1rem;
-  justify-content: center;
+  height: 50%;
   align-items: center;
 }
 
+.menu-down {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3px;
+}
 
 .menu:hover .bar, .menu:hover .circle {
   background-color: #fff;
 }
+
 
 .bar {
   width: 100%;
@@ -113,8 +111,8 @@
 }
 
 .menu-up .bar {
-  width: calc( 100% - 7px);
-
+    width: calc( 100% - 7px);
+    
 }
 .circle {
   width: 7px;
@@ -163,4 +161,63 @@
 .searchicon:hover {
   color: #fff;
   
+}
+
+.timeline {
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeline::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: rgb(224, 221, 221);
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+    gap: .03rem;
+    color: #666666;
+    padding: 1rem 1.5rem .4rem 3rem;
+    cursor: pointer;
+}
+
+.time-item:hover .datetime, .time-item:hover .item-text {
+    color: #5f98cd;
+}
+
+.datetime {
+    font-size: 11px;
+    line-height: 11px;
+    position: relative;
+    transition: all 200ms ease;
+}
+
+
+.datetime::before {
+    content: '';
+    background-color: #fff;
+    border: 2px solid #5f98cd;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px #fff;
+    position: absolute;
+    top: 4px;
+    left: -20px;
+}
+
+.item-text {
+    font-size: 15px;
+    line-height: 20px;
+    transition: all 200ms ease;
 }
