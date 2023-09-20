@@ -29,4 +29,37 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+
+.card-left {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.card-right {
+    width: 20%;
+}
+
+.profile {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+}
+
+.profile img {
+    width: 100%;
 }
