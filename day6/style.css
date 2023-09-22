@@ -102,15 +102,55 @@
 
 .profile {
     border-radius: 100%;
-    overflow: hidden;
     width: 70px;
     height: 70px;
+    position: relative;
+}
+
+.profile:hover::before {
+    transform: rotate(360deg);
+}
+
+.profile:hover::after {
+    transform: rotate(-360deg);
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: -5px; left: -5px;
+    width: 110%;
+    height: 110%;
+    border: 1px solid black;
+    border-color: #82705d #82705d #82705d transparent;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 1500ms ease;
+}
+
+.profile::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: -8px; left: -8px;
+    width: 118%;
+    height: 118%;
+    border: 1px solid black;
+    border-color: #82705d transparent #82705d #82705d;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 1500ms ease;
 }
 
 .profile img {
     width: 100%;
+    border-radius: 100%;
 }
 
+.circle {
+    
+}
 
 .card-right {
     width: 40%;
