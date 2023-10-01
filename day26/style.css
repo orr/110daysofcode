@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+ background-color:#C7D6E1;
+ width: 100%;
+ height: 100%;
+ border-radius: 5px;  
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ overflow: hidden;
+}
+
+.modal {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	
+	position: relative;
+	height: 35%;
+	width: 60%;
+	border-radius: 3px;
+	overflow: hidden;
+	opacity: 0;
+	transform: scale(0.6);
+	
+	position: absolute;
+}
+
+.show {
+	animation: showup 600ms ease-in-out 500ms forwards;
+}
+
+.fade{
+	animation: fade 500ms ease-in-out;
+}
+
+@keyframes showup {
+	from {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fade {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 75%;
+	width: 100%;
+}
+
+.corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	color: #fff;
+	padding-right: 5px;
+	padding-top: 5px;
+	font-size: 13px;
+	line-height: 1;
+	font-weight: 600;
+	
+}
+
+
+.corner::before {
+	content: '';
+	top: 0;
+	right: 0;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 40px 40px 0;
+	border-color: transparent #8391A1 transparent transparent;
+	z-index: -1;
+}
+
+.headline {
+	color: #616E7D;
+	display: block;
+	width: fit-content;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+}
+
+.main p {
+	width: 80%;
+	font-size: 12px;
+	line-height: 17px;
+	color: #8391A1;
+	text-align: center;
+}
+
+.btn {
+	width: 100%;
+	height: 25%;
+	border: none;
+	background-color: #3CA7FB;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: .5rem;
+	transition: background-color 200ms;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #2196F3;
+}
