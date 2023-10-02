@@ -99,11 +99,14 @@
   margin-right: auto;
   font-size: 13px;
   cursor: pointer;
+  color: #497081;
 }
 
 .checkwrapper {
   float: right;
   position: relative;
+  left: -15px;
+  cursor: pointer;
 }
 .checkitem {
   width: 15px;
@@ -127,6 +130,10 @@
   
 }
 
+ .selected {
+  color: #C8D4D9 !important;
+}
+
 .block {
   background-color: #fff;
   z-index: 2;
@@ -137,8 +144,12 @@
   top: 5px;
   left: -2px;
   overflow: hidden;
+  color: #C8D4D9;
 }
 
+.checkhidden i {
+  color: #C8D4D9;
+}
 
 @keyframes showcheck {
   from {
