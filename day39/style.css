@@ -59,6 +59,10 @@
   
 }
 
+.bars.active {
+  pointer-events: none;
+}
+
 .bar-top, .bar-bottom {
   position: absolute;
   left: 0px;

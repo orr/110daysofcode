@@ -2,6 +2,7 @@ const nav = document.querySelector(".nav");
 const bars = document.querySelector(".bars");
 let first = false;
 
+const bar = document.querySelector(".bar");
 const barsTop = document.querySelector(".bar-top");
 const barsBottom = document.querySelector(".bar-bottom");
 
@@ -16,6 +17,7 @@ function addAnimations() {
     barsTop.classList.toggle('active');
     barsBottom.classList.toggle('active');
     nav.classList.toggle('active');
+    bar.classList.toggle('acive');
 }
 
 const items = document.querySelectorAll('.item');
